@@ -7,7 +7,7 @@ export default {
   props: {
     placeholder: {
       type: String,
-      require: true
+      required: true
     }
   }
 }

@@ -7,19 +7,19 @@ export default {
   props: {
     src: {
       type: String,
-      require: true
+      required: true
     },
     alt: {
       type: String,
-      require: true
+      required: true
     },
     width: {
       type: Number,
-      require: true
+      required: true
     },
     height: {
       type: Number,
-      require: true
+      required: true
     }
   }
 }

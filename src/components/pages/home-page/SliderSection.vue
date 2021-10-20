@@ -16,11 +16,11 @@ export default {
   props: {
     items: {
       type: Array,
-      require: true
+      required: true
     },
     title: {
       type: String,
-      require: true
+      required: true
     }
   }
 }
