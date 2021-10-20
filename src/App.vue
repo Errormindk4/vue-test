@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <SearchFullWidth />
+    <SliderSection title="Elected Validators" :items="items" />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
+import SearchFullWidth from "@/components/pages/home-page/SearchFullWidth";
+import SliderSection from "@/components/pages/home-page/SliderSection";
 
 export default {
   name: 'App',
+  data () {
+    return {
+      items: [
+        {image: {}, title: 'test'},
+        {image: {}, title: 'test'},
+        {image: {}, title: 'test'},
+        {image: {}, title: 'test'}
+      ]
+    }
+  },
   components: {
-    HelloWorld
+    SliderSection,
+    SearchFullWidth,
+    Footer,
+    Header
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+body, html {
+  margin: 0;
+  font-size: 14px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: linear-gradient(0, #fff, $main);
+  padding: 0 40px;
 }
 </style>
